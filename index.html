@@ -1,23 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/index.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-
+    <link href="css/index.css" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="js/index.js"></script>
     <title>Index</title>
 </head>
 
-<body>
-
-    <div class=" container position-absolute top-50 start-50 translate-middle">
-        <p class="h1">Welcome to <a href="https://github.com/Iceberry-qdd" class="link-primary">Iceberry's</a> blog.</p>
+<body style="margin: 0px;">
+    <div class="center-text full-screen-container">
+        <h1>Welcome to <a class="href" href="https://github.com/Iceberry-qdd">Icebery's</a> blog.</h1>
     </div>
+    <div class="center-text full-screen-container pd-container">
+        <div class="download-container">
+            <img class="icon" src="img/pd_icon.png">
+            <button type="button" class="primary-btn" onclick="getDownloadUrl('pd')">立即获取</button>
+        </div>
 
+        <img class="screenshot" src="img/pd_screenshot.png" alt="截图">
+    </div>
+    <div class="center-text full-screen-container gh-container">
+        <img class="screenshot" src="img/gh_screenshot.png" alt="截图">
+        <div class="download-container">
+            <img class="icon" src="img/gh_icon.png">
+            <button class="primary-btn disabled-btn" onclick="getDownloadUrl('gh')">即将推出</button>
+        </div>
+    </div>
+    <div class="center-text full-screen-container ks-container">
+        <div class="download-container">
+            <img class="icon" src="img/ks_icon.png">
+            <button class="primary-btn" onclick="getDownloadUrl('ks')">立即获取</button>
+        </div>
+
+        <img class="screenshot" src="img/ks_screenshot.png" alt="截图">
+    </div>
+    <div class="footer">
+        <span>Iceberry 2021 &#124 powered by github pages</span>
+    </div>
 </body>
+<script>
+    const pdUrl = 'https://github.com/Iceberry-qdd/Iceberry-qdd.github.io/releases/download/v0.1-alpha/PornDetect.apk'
+    const ksUrl = 'https://github.com/Iceberry-qdd/Iceberry-qdd.github.io/releases/download/v0.1-alpha/KeySave.apk'
+
+    function getDownloadUrl(appId) {
+        switch (appId) {
+            case 'pd':
+                window.location.href = pdUrl;
+                break;
+            case 'ks':
+                window.location.href = ksUrl;
+                break;
+            default:
+                ;
+        }
+    }
+</script>
 
 </html>
