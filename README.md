@@ -1,1 +1,1 @@
-Pages
+My blog
